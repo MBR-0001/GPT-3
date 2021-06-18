@@ -1,6 +1,6 @@
 <template>
-  <div id="app" style="min-height: 100vh;">
-    <b-overlay variant="dark" opacity="0.3" :show="$root.requesting" style="width: 100%; height: 100%;">
+  <div id="app">
+    <b-overlay variant="dark" opacity="0.3" :show="$root.requesting" style="min-height: 100vh; width: 100%;">
       <b-navbar toggleable="lg" type="dark" variant="secondary" style="width: 100%;">
         <b-navbar-brand href="#">GPT-3</b-navbar-brand>
 
