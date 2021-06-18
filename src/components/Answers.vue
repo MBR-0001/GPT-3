@@ -15,7 +15,7 @@
     </div>
 
     <div style="display: flex; flex-wrap: wrap;">
-      <div v-for="(item, i) in example_list" v-bind:key="i" style="margin: 0 5px 10px;">
+      <div v-for="(item, i) in exampleList" v-bind:key="i" style="margin: 0 5px 10px;">
         <div style="display: flex;">
           <b-form-input v-model="item.question" type="text" placeholder="Question"></b-form-input>
           <b-button v-if="i != 0" variant="danger" @click="deleteExample(i - 1)">
@@ -52,7 +52,7 @@ export default {
     cannotAdd() {
       return !this.current.question || !this.current.answer;
     },
-    example_list() {
+    exampleList() {
       return  [this.current, ...this.examples];
     }
   },
