@@ -5,7 +5,11 @@ Vue.config.productionTip = false;
 
 new Vue({
   data: {
-    key: ""
+    key: "",
+    freeze: false,
+    engine: null,
+    engines: [{text: "Select engine", value: null}],
+    requesting: false
   },
   render: h => h(App),
 }).$mount("#app");
