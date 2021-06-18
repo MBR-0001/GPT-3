@@ -13,7 +13,7 @@
         </b-collapse>
       </b-navbar>
       
-      <b-tabs style="width: 100%;" active-tab-class="test">
+      <b-tabs style="width: 100%;" active-tab-class="pad">
         <b-tab title="Completion"><Completion /></b-tab>
         <b-tab title="Answers"><Answers /></b-tab>
       </b-tabs>
@@ -69,14 +69,9 @@ export default {
     Completion,
     Answers
   },
-  data() {
-    return {
-      
-    };
-  },
-  methods: {},
   async mounted() {
-    await this.sleep(1500);
+    await this.sleep(1000);
+
     if (!this.$root.key) {
       let key = "";
 
@@ -84,7 +79,6 @@ export default {
         let temp = "";
         do { temp = prompt("Enter your GPT-3 API key"); }
         while (!temp);
-        console.log("got key");
       
         let b = await this.request("https://api.openai.com/v1/engines", "GET", null, temp);
         if (b.success) {
@@ -94,7 +88,6 @@ export default {
       }
 
       this.$root.key = key;
-      console.log("API key innit");
     }
   }
 };
@@ -111,9 +104,6 @@ export default {
   align-items: center;
 }
 
-.test {
-  padding: 10px;
-}
-
+.pad { padding: 10px; }
 label { margin: 0; } 
 </style>

@@ -6,7 +6,6 @@ Vue.config.productionTip = false;
 new Vue({
   data: {
     key: "",
-    freeze: false,
     engine: null,
     engines: [{text: "Select engine", value: null}],
     requesting: false
