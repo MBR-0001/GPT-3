@@ -13,9 +13,17 @@
         </b-collapse>
       </b-navbar>
       
-      <b-tabs style="width: 100%;" active-tab-class="pad">
-        <b-tab title="Completion"><Completion /></b-tab>
-        <b-tab title="Answers"><Answers /></b-tab>
+      <b-tabs active-tab-class="pad">
+        <b-tab title="Completion">
+          <b-container>
+            <Completion />
+          </b-container>
+        </b-tab>
+        <b-tab title="Answers">
+          <b-container>
+            <Answers />
+          </b-container>
+        </b-tab>
       </b-tabs>
     </b-overlay>
   </div>

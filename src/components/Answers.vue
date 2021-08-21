@@ -29,7 +29,7 @@
       </div>
     </div>
 
-    <b-button variant="success" style="width: 100%; margin: 5px 0;" @click="run" :disabled="!question || examples.length < 1 || cannotRequest()">Send</b-button>
+    <b-button variant="success" style="width: 100%; margin: -5px 0 5px;" @click="run" :disabled="!question || examples.length < 1 || cannotRequest()">Send</b-button>
     <b-form-textarea v-model="response" style="height: 150px;" readonly placeholder="Response"></b-form-textarea>
   </div>
 </template>
